@@ -1,8 +1,11 @@
 name: Greetings
 
-on: [pull_request_target, issues]
-workflow_dispatch:
-
+on:
+  pull_request:
+    branches:
+      - '**' # Runs on PRs targeting any branch
+  workflow_dispatch:
+  
 jobs:
   greeting:
     runs-on: ubuntu-latest
